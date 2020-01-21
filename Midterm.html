@@ -1,0 +1,42 @@
+<html>
+<head>
+<!-- Midterm Part 2 
+	 Elizabeth Rhoten
+	 10/16/19
+--> 
+
+<title>Midterm PE</title>
+
+
+</head>
+<body>
+	<header>
+		<h1>Elizabeth, Target Heart Rate</h1>
+	</header>
+	
+	<label id="label1">Your Age</label>
+	<input type="text" id="myAge" />
+	<input type="button" id="calc" value="Calculate Target Heart Rate" 
+			onclick="calcRate()" /><br><br>
+
+	
+	Target Heart Rate: <p id="demo"></p>
+
+</body>
+<script>
+	function calcRate(){
+		var age = document.getElementById("myAge").value;
+		var maxRate = 220-age;
+		var targetMin = Math.floor(maxRate * 0.5);
+		var targetMax = Math.floor(maxRate * 0.85);
+	
+		
+		document.getElementById("demo").innerHTML = 
+			targetMin + " to " + targetMax + " Beats Per Minute";
+		
+		
+		
+	}
+
+</script>
+</html>
